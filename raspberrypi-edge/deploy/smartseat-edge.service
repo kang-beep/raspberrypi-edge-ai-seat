@@ -1,0 +1,15 @@
+[Unit]
+Description=SmartSeat Raspberry Pi Edge Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/smartseat/raspberrypi-edge
+EnvironmentFile=/opt/smartseat/raspberrypi-edge/.env
+ExecStart=/opt/smartseat/raspberrypi-edge/.venv/bin/python src/main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,29 @@
+---
+description: SmartSeat Raspberry Pi Edge project context and conventions
+alwaysApply: true
+---
+
+# SmartSeat Edge Rules
+
+You are working in `raspberrypi-edge/` only (Pi 5 runtime). PC backend/frontend live in other repo folders and may be absent on this machine.
+
+## Read first
+
+- `AGENTS.md`
+- `docs/project-context.md`
+- `docs/mqtt.md`
+- `docs/flows.md`
+
+## Hard constraints
+
+- Device IDs: `raspi-a{n}` (e.g. `raspi-a1`)
+- Broker: EMQX Cloud MQTT over TLS port 8883 via `.env`
+- Do not put secrets in source; use `.env`
+- Do not send video over MQTT
+- Occupancy: ultrasonic is a candidate signal; face verify confirms sit/leave when possible
+- Prefer small functions, type hints, named constants
+
+## Scope
+
+Implement sensors, camera, AI inference, seat monitoring, MQTT client under `src/`.
+Do not invent PC REST APIs here unless documented in `docs/`.

@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+data/*.db
+data/*.db-journal
+data/faces/*
+!data/faces/.gitkeep
+data/embeddings/*
+!data/embeddings/.gitkeep
+
+egg-info/
+*.egg-info/
+

@@ -1,0 +1,14 @@
+[project]
+name = "smartseat-ai-training"
+version = "0.1.0"
+description = "AI model training and validation for the smart seat system"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "onnx",
+    "onnxruntime",
+]
+
+[tool.uv]
+package = false
